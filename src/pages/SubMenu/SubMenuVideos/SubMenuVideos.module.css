@@ -1,0 +1,188 @@
+.mainContent {
+  display: flex;
+  align-items: stretch;
+  margin-top: 20px;
+  height: calc(100vh - 300px);
+  min-height: 500px;
+  width: 100%;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+}
+
+.subsectionButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  min-height: 400px;
+}
+
+.subsectionBtn {
+  font-family: 'Anticva', serif;
+  text-align: center;
+  min-width: 260px;
+  height: 70px;
+  padding: 12px 24px;
+  font-size: 22px;
+  background: rgba(255, 255, 255, 20%);
+  color: #fff;
+  border: 0.75px solid #fff;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.subsectionBtn:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: translateX(4px);
+}
+
+.subsectionBtnActive {
+  background: #1C2144;
+  border: none;
+  font-weight: 600;
+}
+
+.textBlock {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+}
+.textBlockCentered {
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 0;
+  max-width: 800px;
+  width: 100%;
+  min-height: 650px;
+}
+
+/* Видео блок */
+.videoBlock {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 8px;
+  min-height: 500px;
+  margin-left: 20px;
+}
+
+.videoBlockTitle {
+  font-family: 'Anticva', serif;
+  font-size: 1.5rem;
+  color: #021A2A;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.videoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  flex: 1;
+  align-content: start;
+}
+
+.videoCard {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 140px;
+}
+
+.videoThumb {
+  flex: 1;
+  min-height: 100px;
+  background: rgba(0, 0, 0, 0.2);
+  background-size: cover;
+  background-position: center;
+}
+
+.videoTitle {
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  color: #fff;
+  font-family: 'Anticva', serif;
+}
+
+.videoPagination {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.videoPageBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Anticva', serif;
+}
+
+.videoPageBtn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}
+
+.videoPageBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.videoBottomNav {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+  justify-content: flex-start;
+}
+
+@media (max-width: 968px) {
+  .mainContent {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .leftColumn {
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: auto;
+  }
+
+  .subsectionButtons {
+    flex-direction: row;
+  }
+
+  .videoBlock {
+    margin-left: 0;
+  }
+
+  .videoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .textBlock {
+    flex: none;
+  }
+}

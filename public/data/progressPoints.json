@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "label": "история создания <br/> музейного комплекса",
+    "author": "Иванов",
+    "work": "История музея",
+    "filterIds": [101, 104, 202],
+    "texts": [
+      "Это уникальная коллекция работ выдающихся архитекторов, которые изменили облик городов и повлияли на развитие архитектуры во всем мире.",
+      "В эпоху классицизма архитектура стала важным инструментом выражения государственной идеологии и культурных ценностей."
+    ],
+    "photos": ["/photos/photo1.jpg"]
+  },
+  {
+    "id": 2,
+    "label": "научная деятельность",
+    "author": "Музей",
+    "work": "Научная деятельность",
+    "filterIds": [101, 104, 302],
+    "subsections": [
+      {
+        "key": "research",
+        "label": "Исследования",
+        "author": "Габе",
+        "work": "Изучение наследия",
+        "filterIds": [101, 201],
+        "texts": ["Текст раздела «Исследования». Изучение архитектурного наследия.", "text"],
+        "photos": ["/photos/photo1.jpg"]
+      },
+      {
+        "key": "publications",
+        "label": "Публикации",
+        "author": "Стамов",
+        "work": "Научные издания",
+        "filterIds": [102, 302],
+        "texts": ["Текст раздела «Публикации». Научные издания музея.", "text"],
+        "photos": ["/photos/photo1.jpg"]
+      },
+      {
+        "key": "conference",
+        "label": "Конференция",
+        "author": "Петров",
+        "work": "Ежегодные конференции",
+        "filterIds": [102, 203, 302],
+        "texts": ["Текст раздела «Конференция». Ежегодные научные конференции.", "text"],
+        "photos": ["/photos/photo1.jpg"]
+      }
+    ],
+    "texts": ["Обзор научной деятельности музея. Исследования, публикации и конференции.", "text"],
+    "photos": []
+  },
+  {
+    "id": 3,
+    "label": "образовательные <br/> программы",
+    "author": "Музей",
+    "work": "Образовательные программы",
+    "filterIds": [101, 104, 301, 303, 304],
+    "subsections": [
+      {
+        "key": "lectures",
+        "label": "Лекции",
+        "author": "Габе",
+        "work": "Архитектурные лекции",
+        "filterIds": [101, 301],
+        "videos": [
+          { "id": 1, "title": "Лекция 1", "url": "/videos/lecture1.jpg", "author": "Габе", "work": "Лекция о классицизме", "filterIds": [101, 301] },
+          { "id": 2, "title": "Лекция 2", "url": "/videos/lecture2.jpg", "author": "Стамов", "work": "Современная архитектура", "filterIds": [101, 301] },
+          { "id": 3, "title": "Лекция 3", "url": "/videos/lecture3.jpg", "author": "Петров", "work": "Народная архитектура", "filterIds": [102, 301] },
+          { "id": 4, "title": "Лекция 4", "url": "/videos/lecture4.jpg", "author": "Габе", "work": "Проект Габе", "filterIds": [103, 301] },
+          { "id": 5, "title": "Лекция 5", "url": "/videos/lecture5.jpg", "author": "Стамов", "work": "Проект Стамова", "filterIds": [103, 301] },
+          { "id": 6, "title": "Лекция 6", "url": "/videos/lecture6.jpg", "author": "Петров", "work": "Проект Петрова", "filterIds": [103, 303] },
+          { "id": 7, "title": "Лекция 7", "url": "/videos/lecture7.jpg", "author": "Габе", "work": "История зодчества", "filterIds": [101, 202, 301] },
+          { "id": 8, "title": "Лекция 8", "url": "/videos/lecture8.jpg", "author": "Стамов", "work": "Городская среда", "filterIds": [101, 301] }
+        ]
+      },
+      {
+        "key": "excursions",
+        "label": "Экскурсии",
+        "author": "Музей",
+        "work": "Экскурсионные программы",
+        "filterIds": [304],
+        "videos": [
+          { "id": 1, "title": "Экскурсия 1", "url": "/videos/excursion1.jpg", "author": "Габе", "work": "Экскурсия по Габе", "filterIds": [101, 304] },
+          { "id": 2, "title": "Экскурсия 2", "url": "/videos/excursion2.jpg", "author": "Стамов", "work": "Экскурсия Стамова", "filterIds": [102, 304] },
+          { "id": 3, "title": "Экскурсия 3", "url": "/videos/excursion3.jpg", "author": "Петров", "work": "Экскурсия Петрова", "filterIds": [103, 304] },
+          { "id": 4, "title": "Экскурсия 4", "url": "/videos/excursion4.jpg", "author": "Габе", "work": "Архитектура Габе", "filterIds": [101, 304] },
+          { "id": 5, "title": "Экскурсия 5", "url": "/videos/excursion5.jpg", "author": "Стамов", "work": "Архитектура Стамова", "filterIds": [101, 304] },
+          { "id": 6, "title": "Экскурсия 6", "url": "/videos/excursion6.jpg", "author": "Петров", "work": "Архитектура Петрова", "filterIds": [102, 304] },
+          { "id": 7, "title": "Экскурсия 7", "url": "/videos/excursion7.jpg", "author": "Габе", "work": "Обзорная экскурсия", "filterIds": [104, 304] }
+        ]
+      },
+      {
+        "key": "masterclass",
+        "label": "Мастер-классы",
+        "author": "Музей",
+        "work": "Мастер-классы по архитектуре",
+        "filterIds": [303],
+        "videos": [
+          { "id": 1, "title": "Мастер-класс 1", "url": "/videos/master1.jpg", "author": "Стамов", "work": "Мастер-класс Стамова", "filterIds": [102, 303] },
+          { "id": 2, "title": "Мастер-класс 2", "url": "/videos/master2.jpg", "author": "Петров", "work": "Мастер-класс Петрова", "filterIds": [103, 303] },
+          { "id": 3, "title": "Мастер-класс 3", "url": "/videos/master3.jpg", "author": "Габе", "work": "Мастер-класс Габе", "filterIds": [101, 303] },
+          { "id": 4, "title": "Мастер-класс 4", "url": "/videos/master4.jpg", "author": "Стамов", "work": "Проектирование", "filterIds": [103, 303] },
+          { "id": 5, "title": "Мастер-класс 5", "url": "/videos/master5.jpg", "author": "Петров", "work": "Дизайн интерьера", "filterIds": [303] },
+          { "id": 6, "title": "Мастер-класс 6", "url": "/videos/master6.jpg", "author": "Габе", "work": "Чертежи и макеты", "filterIds": [103, 303] },
+          { "id": 7, "title": "Мастер-класс 7", "url": "/videos/master7.jpg", "author": "Стамов", "work": "Современные материалы", "filterIds": [101, 303] }
+        ]
+      }
+    ],
+    "texts": ["Обзор образовательных программ. Лекции, экскурсии и мастер-классы.", "text"],
+    "photos": []
+  }
+]

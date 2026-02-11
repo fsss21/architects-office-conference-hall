@@ -1,0 +1,441 @@
+.header {
+  position: absolute;
+  top: 15px;
+  left: 28%;
+  right: 0;
+  padding: 20px 0;
+  font-family: 'Anticva', serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  z-index: 1000;
+}
+
+.headerTitle {
+  display: flex;
+  align-items: flex-start;
+  text-align: center;
+  font-size: 28px;
+  font-weight: normal;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  font-family: 'Anticva', serif;
+}
+
+/* Страница карточки каталога /catalog/:id */
+.headerOnItemPage  {
+  right: auto;
+  left: 5%;
+}
+
+/* SubMenu id 2 или id 3 */
+.headerSubMenuId2Or3 {
+  right: 21%;
+  left: auto;
+}
+
+.headerButtonsSubMenuId2Or3 {
+  left: 130%;
+  right: auto;
+}
+
+/* Блок навигации на странице карточки каталога (/catalog/:id) */
+.headerItemNav {
+  position: absolute;
+  top: 0;
+  left: 185%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 281px;
+  gap: 16px;
+  margin-right: 25px;
+}
+
+.headerItemNavArrows {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.headerItemNavBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  color: #fff;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.headerItemNavBtn:hover:not(:disabled) {
+  border-color: #CBB293;
+}
+
+.headerItemNavBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.headerItemNavClose {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 50px;
+  color: #fff;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Блок кнопок (только на /catalog) */
+.headerButtons {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 3%;
+}
+
+.headerBtnFilters {
+  font-family: 'Anticva', serif;
+  width: 50px;
+  height: 50px;
+  font-size: 16px;
+  color: #fff;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.headerBtnSearch {
+  font-family: 'Anticva', serif;
+  width: 60px;
+  height: 50px;
+  font-size: 16px;
+  color: #fff;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.headerDropdownWrap,
+.headerSearchWrap {
+  position: relative;
+}
+
+/* Dropdown Фильтры */
+.headerDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  min-width: 420px;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #EAEFF2;
+  border: none;
+  border-radius: 2px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  z-index: 1002;
+  scrollbar-width: thin;
+  scrollbar-color: #021A2A #FBF7F3;
+}
+
+.headerDropdown::-webkit-scrollbar {
+  width: 8px;
+}
+
+.headerDropdown::-webkit-scrollbar-track {
+  background: #FBF7F3;
+  border-radius: 4px;
+}
+
+.headerDropdown::-webkit-scrollbar-thumb {
+  background: #021A2A;
+  border-radius: 4px;
+}
+
+.headerDropdown::-webkit-scrollbar-thumb:hover {
+  background: #221102;
+}
+
+.headerDropdownHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  background: #fff;
+  padding: 10px;
+}
+
+
+.headerDropdownTitle {
+  font-family: 'Anticva', serif;
+  font-size: 18px;
+  color: #021A2A;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.headerDropdownClose {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: none;
+  border: none;
+  color: #021A2A;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+
+.headerFilterBlock {
+  margin-bottom: 20px;
+  padding: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+}
+
+.headerFilterBlockCollapsed .headerFilterLabelWrap {
+  margin-bottom: 0;
+}
+
+.headerFilterLabelWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.headerFilterBlock:last-of-type {
+  border-bottom: none;
+}
+
+.headerFilterLabel {
+  display: block;
+  font-family: 'Anticva', serif;
+  font-size: 18px;
+  color: #221102;
+}
+
+.headerFilterOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 0;
+}
+
+.headerFilterEmpty {
+  font-size: 14px;
+  color: #888;
+  font-style: italic;
+}
+
+.headerFilterCheck {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  color: #221102;
+  cursor: pointer;
+}
+
+.headerFilterCheck input {
+  accent-color: #CBB293;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: 1px solid #826748;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 2px;
+}
+
+.headerFilterCheck input:checked {
+  background: #98a2db url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231a1a1a' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") center / 12px no-repeat;
+  border-color: #021A2A;
+}
+
+.headerCollapseBtn {
+  font-family: 'Anticva', serif;
+  font-size: 14px;
+  color: #666;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.headerCollapseBtn:hover {
+  color: #021A2A;
+}
+
+.headerShowBtn {
+  font-family: 'Anticva', serif;
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px 20px;
+  font-size: 16px;
+  color: #000000;
+  background: none;
+  border: 1px solid #000000;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.headerShowBtn:hover {
+  background: rgba(147, 173, 203, 0.35);
+}
+
+/* Панель поиска — одна линия: лупа | поле | кнопка закрытия */
+.headerSearchPanel {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  min-width: 620px;
+  background: #fff;
+  border: 1px solid rgba(147, 155, 203, 0.4);
+  border-radius: 8px;
+  padding: 12px 14px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  z-index: 1002;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.headerSearchForm {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.headerSearchIconBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #021A2A;
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.headerSearchIconBtn:hover {
+  color: #021A2A;
+}
+
+.headerSearchInput {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 12px;
+  font-size: 15px;
+  color: #161616;
+  background: #FFFDFC;
+  border: solid 2px #021A2A;
+  border-radius: 2px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.headerSearchClose {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  color: #021A2A;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.headerSearchInput::placeholder {
+  color: #B2B2B2;
+}
+
+/* Затемнение контента при открытых фильтрах/поиске */
+.headerOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  cursor: default;
+}
+
+@media (max-width: 768px) {
+  .headerTitle {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+
+  .headerItemNav {
+    margin-right: 0;
+    gap: 8px;
+  }
+
+  .headerButtons {
+    margin-right: 0;
+  }
+
+  .headerDropdown {
+    min-width: 280px;
+    right: 0;
+  }
+
+  .headerSearchPanel {
+    min-width: 280px;
+    right: 0;
+  }
+}

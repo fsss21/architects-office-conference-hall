@@ -1,0 +1,11 @@
+[
+  { "id": 1, "name": "Предмет 1", "title": "Предмет 1", "filterIds": [101, 201, 301], "photos": ["/photos/photo1.jpg"], "texts": ["Описание предмета 1."] },
+  { "id": 2, "name": "Предмет 2", "title": "Предмет 2", "filterIds": [102, 201, 302], "photos": ["/photos/photo1.jpg"], "texts": ["Описание предмета 2."] },
+  { "id": 3, "name": "Предмет 3", "title": "Предмет 3", "filterIds": [103, 202, 301], "photos": ["/photos/photo1.jpg"], "texts": ["Описание предмета 3."] },
+  { "id": 4, "name": "Предмет 4", "title": "Предмет 4", "filterIds": [101, 202, 303], "photos": ["/photos/photo1.jpg"], "texts": ["Описание предмета 4."] },
+  { "id": 5, "name": "Предмет 5", "title": "Предмет 5", "filterIds": [102, 202, 302], "photos": ["/photos/photo1.jpg"], "texts": ["Описание предмета 5."] },
+  { "id": 6, "name": "Предмет 6", "title": "Предмет 6", "filterIds": [103, 203, 301], "photos": ["/photos/photo1.jpg"], "texts": ["Описание предмета 6."] },
+  { "id": 7, "name": "Предмет 7", "title": "Предмет 7", "filterIds": [104, 201, 304], "photos": ["/photos/photo1.jpg"], "texts": ["Описание предмета 7."] },
+  { "id": 8, "name": "Предмет 8", "title": "Предмет 8", "filterIds": [101, 203, 303], "photos": ["/photos/photo1.jpg"], "texts": ["Описание предмета 8."] },
+  { "id": 9, "name": "Предмет 9", "title": "Предмет 9", "filterIds": [101, 203, 303], "photos": ["/photos/photo1.jpg"], "texts": ["Описание предмета 9."] }
+]

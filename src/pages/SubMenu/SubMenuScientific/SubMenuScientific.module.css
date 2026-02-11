@@ -1,0 +1,80 @@
+.mainContent {
+  display: flex;
+  align-items: stretch;
+  margin-top: 20px;
+  height: calc(100vh - 300px);
+  min-height: 500px;
+  width: 100%;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+}
+
+.subsectionButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  min-height: 400px;
+}
+
+.subsectionBtn {
+  font-family: 'Anticva', serif;
+  text-align: center;
+  min-width: 260px;
+  height: 70px;
+  padding: 12px 24px;
+  font-size: 22px;
+  background: rgba(255, 255, 255, 20%);
+  color: #fff;
+  border: 0.75px solid #fff;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.subsectionBtn:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: translateX(4px);
+}
+
+.subsectionBtnActive {
+  background: #1C2144;
+  border: none;
+  font-weight: 600;
+}
+
+.textBlock {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+}
+
+@media (max-width: 968px) {
+  .mainContent {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .leftColumn {
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: auto;
+  }
+
+  .subsectionButtons {
+    flex-direction: row;
+  }
+
+  .textBlock {
+    flex: none;
+  }
+}
