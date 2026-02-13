@@ -1,6 +1,6 @@
 # Конкурсный зал — React + CSS Modules
-
-Приложение «Конкурсный зал» на React с Vite и CSS Modules.
+**2.07 Конференц Зал**
+Приложение «Конкурсный зал» (архитектурный музей) на React, Vite, CSS Modules и MUI.
 
 ## Запуск
 
@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-Приложение будет доступно по адресу `http://localhost:5173`.
+Приложение будет доступно по адресу `http://localhost:5173` (или следующему свободному порту).
 
 ## Сборка
 
@@ -17,16 +17,50 @@ npm run dev
 npm run build
 ```
 
-## Структура
+Результат сборки — папка `build/`.
 
-- `src/` — исходный код React-приложения
-  - `components/` — компоненты (Header, PhotoGallery, ProgressLine, VideoPreview)
-  - `pages/` — страницы (MainMenu, Catalog, CatalogItem)
-  - `context/` — контекст фильтров каталога
-  - `assets/` — изображения
-- `public/data/catalogItems.json` — данные каталога
+## Сервер (продакшен)
 
-## Заставка (VideoPreview)
+После сборки можно запустить локальный сервер для раздачи статики:
 
-По умолчанию заставка загружает `public/main_page_img.jpg` и `public/main_page_img-4k.jpg`.  
-Если файлов нет, отображается кнопка «Пропустить». Можно добавить свои изображения в `public/`.
+```bash
+npm run build
+npm run server
+```
+
+Сервер запустится на `http://localhost:3001` и автоматически откроет браузер в отдельном окне.
+
+### Сборка exe для Windows
+
+```bash
+npm run build:win
+```
+
+Создаётся `build/launch.exe` — автономный запускатель приложения (Node + статика внутри).
+
+## Структура проекта
+
+```
+src/
+├── components/     — Header, PhotoGallery, ProgressLine, VideoPreview
+├── pages/          — MainMenu, SubMenu, Catalog, CatalogItem
+├── context/        — CatalogFilterContext, SubMenuFilterContext
+├── utils/          — subMenuFilter
+├── assets/         — изображения для меню и каталога
+└── server/         — сервер для раздачи build/ (Express)
+```
+
+## Маршруты
+
+- `/` — главное меню
+- `/submenu` — подменю (разделы: по умолчанию, научная деятельность, видео)
+- `/catalog` — каталог с фильтрами
+- `/catalog/:id` — карточка предмета каталога
+
+## Данные
+
+Файлы в `public/data/`:
+
+- `catalogItems.json` — элементы каталога
+- `progressPoints.json` — пункты прогресса на главном меню
+- `filterOptions.json` — опции фильтров (слова, даты, типы документов)
