@@ -186,3 +186,127 @@
     flex: none;
   }
 }
+
+@media (min-width: 2560px) {
+  .mainContent {
+    height: calc(100vh - 360px);
+    min-height: 700px;
+    margin-top: 0;
+  }
+
+  .leftColumn {
+    min-width: 420px;
+  }
+
+  .subsectionButtons {
+    gap: 45px;
+  }
+
+  .subsectionBtn {
+    min-width: 320px;
+    height: 90px;
+    font-size: 30px;
+  }
+
+  .textBlock {
+    padding: 40px;
+  }
+
+  .videoBlock {
+    padding: 40px;
+    min-height: 700px;
+    margin-left: 20px;
+  }
+
+  .videoBlockTitle {
+    font-size: 2.7rem;
+    margin-bottom: 28px;
+  }
+
+  .videoGrid {
+    gap: 28px;
+  }
+
+  .videoCard {
+    min-height: 220px;
+  }
+
+  .videoTitle {
+    font-size: 1.25rem;
+  }
+
+  .videoPagination {
+    margin-top: 34px;
+  }
+
+  .videoPageBtn {
+    width: 64px;
+    height: 64px;
+    font-size: 1.25rem;
+  }
+
+  .videoBottomNav {
+    gap: 32px;
+  }
+}
+
+@media (min-width: 3840px) {
+  .mainContent {
+    height: calc(100vh - 460px);
+    min-height: 980px;
+  }
+
+  .leftColumn {
+    min-width: 520px;
+  }
+
+  .subsectionButtons {
+    gap: 60px;
+  }
+
+  .subsectionBtn {
+    min-width: 420px;
+    height: 120px;
+    font-size: 40px;
+  }
+
+  .textBlock {
+    padding: 56px;
+  }
+
+  .videoBlock {
+    padding: 56px;
+    min-height: 980px;
+  }
+
+  .videoBlockTitle {
+    font-size: 3.8rem;
+    margin-bottom: 40px;
+  }
+
+  .videoGrid {
+    gap: 44px;
+  }
+
+  .videoCard {
+    min-height: 300px;
+  }
+
+  .videoTitle {
+    font-size: 1.5rem;
+  }
+
+  .videoPagination {
+    margin-top: 44px;
+  }
+
+  .videoPageBtn {
+    width: 88px;
+    height: 88px;
+    font-size: 1.5rem;
+  }
+
+  .videoBottomNav {
+    gap: 44px;
+  }
+}

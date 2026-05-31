@@ -35,3 +35,23 @@
   text-align: center;
   padding: 60px 20px;
 }
+
+@media (min-width: 2560px) {
+  .subMenu {
+    padding-top: 120px;
+  }
+
+  .subMenuContent {
+    padding-top: 50px;
+  }
+}
+
+@media (min-width: 3840px) {
+  .subMenu {
+    padding-top: 180px;
+  }
+
+  .subMenuContent {
+    padding-top: 80px;
+  }
+}

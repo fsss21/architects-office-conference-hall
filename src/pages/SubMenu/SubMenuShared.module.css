@@ -222,3 +222,121 @@
     flex: none;
   }
 }
+
+@media (min-width: 2560px) {
+  .textBlock h2 {
+    font-size: 2.7rem;
+    margin-bottom: 28px;
+  }
+
+  .textBlock p {
+    font-size: 30px;
+    line-height: 1.75;
+  }
+
+  .bottomNav {
+    max-width: 860px;
+  }
+
+  .textNavBtn {
+    width: 64px;
+    height: 64px;
+    font-size: 30px;
+  }
+
+  .btn {
+    padding: 16px 34px;
+    font-size: 1.25rem;
+  }
+
+  .galleryBlock {
+    max-width: 1300px;
+  }
+
+  .galleryWrapper {
+    max-width: 1120px;
+  }
+
+  .galleryWrapper :global(div[class*="photoGalleryContainer"]) {
+    min-height: 520px;
+    max-height: 700px;
+  }
+
+  .galleryControls {
+    max-width: 1120px;
+  }
+
+  .galleryNavBtn {
+    width: 64px;
+    height: 64px;
+    font-size: 30px;
+  }
+
+  .galleryCounter {
+    font-size: 24px;
+    min-width: 120px;
+  }
+
+  .fullscreenBtn {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 3840px) {
+  .textBlock h2 {
+    font-size: 3.8rem;
+    margin-bottom: 40px;
+  }
+
+  .textBlock p {
+    font-size: 42px;
+    line-height: 1.75;
+  }
+
+  .bottomNav {
+    max-width: 1240px;
+  }
+
+  .textNavBtn {
+    width: 88px;
+    height: 88px;
+    font-size: 40px;
+  }
+
+  .btn {
+    padding: 24px 50px;
+    font-size: 1.8rem;
+  }
+
+  .galleryBlock {
+    max-width: 1900px;
+  }
+
+  .galleryWrapper {
+    max-width: 1600px;
+  }
+
+  .galleryWrapper :global(div[class*="photoGalleryContainer"]) {
+    min-height: 780px;
+    max-height: 980px;
+  }
+
+  .galleryControls {
+    max-width: 1600px;
+  }
+
+  .galleryNavBtn {
+    width: 88px;
+    height: 88px;
+    font-size: 40px;
+  }
+
+  .galleryCounter {
+    font-size: 34px;
+    min-width: 160px;
+  }
+
+  .fullscreenBtn {
+    font-size: 86px;
+  }
+}
