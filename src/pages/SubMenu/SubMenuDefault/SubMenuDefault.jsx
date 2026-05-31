@@ -30,13 +30,16 @@ function SubMenuDefault({ point, onBack, onMainMenu }) {
 
   return (
     <div className={styles.mainContent}>
+      <div className={styles.leftColumn}>
+        <div className={styles.leftPlaceholder} aria-hidden="true" />
+      </div>
       <div className={styles.menu}>
         <div className={`${styles.textBlock} ${sharedStyles.textBlock}`}>
           <h2 dangerouslySetInnerHTML={{ __html: point?.label || '' }} />
           {displayTexts.length > 0 && (
             <p dangerouslySetInnerHTML={{ __html: displayTexts[currentTextIndex] || '' }} />
           )}
-          <div className={sharedStyles.bottomNav}>
+          <div className={`${sharedStyles.bottomNav} ${sharedStyles.bottomNavSubMenuId2Or3}`}>
             {!hasPhotos ? (
               <>
                 <button className={`${sharedStyles.btn} ${sharedStyles.btnBack}`} onClick={onBack}>Назад</button>

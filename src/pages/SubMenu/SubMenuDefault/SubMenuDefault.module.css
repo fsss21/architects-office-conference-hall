@@ -1,16 +1,33 @@
 .mainContent {
   display: flex;
-  justify-content: space-between;
   align-items: stretch;
+  justify-content: space-between;
   margin-top: 20px;
   height: calc(100vh - 300px);
   min-height: 500px;
   width: 100%;
 }
 
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+}
+
+.leftPlaceholder {
+  min-width: 260px;
+  width: 100%;
+  min-height: 400px;
+  background: none;
+  border: none;
+
+}
+
 .menu {
   display: flex;
-  max-width: 700px;
+  flex: 1;
+  max-width: 600px;
   padding: 20px;
 }
 
@@ -19,14 +36,23 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 30px;
-  border-radius: 12px;
 }
 
 @media (max-width: 968px) {
   .mainContent {
     flex-direction: column;
     gap: 30px;
+  }
+
+  .leftColumn {
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: auto;
+    width: 100%;
+  }
+
+  .leftPlaceholder {
+    min-height: 120px;
   }
 
   .textBlock {
@@ -41,6 +67,15 @@
     margin-top: 0;
   }
 
+  .leftColumn {
+    min-width: 420px;
+  }
+
+  .leftPlaceholder {
+    min-width: 320px;
+    min-height: 500px;
+  }
+
   .textBlock {
     padding: 40px;
   }
@@ -50,6 +85,15 @@
   .mainContent {
     height: calc(100vh - 460px);
     min-height: 980px;
+  }
+
+  .leftColumn {
+    min-width: 520px;
+  }
+
+  .leftPlaceholder {
+    min-width: 420px;
+    min-height: 640px;
   }
 
   .textBlock {

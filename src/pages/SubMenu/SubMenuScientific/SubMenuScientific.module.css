@@ -1,6 +1,7 @@
 .mainContent {
   display: flex;
   align-items: stretch;
+  justify-content: space-between;
   margin-top: 20px;
   height: calc(100vh - 300px);
   min-height: 500px;
@@ -56,6 +57,7 @@
   border-radius: 12px;
   width: 100%;
   max-width: 600px;
+  max-height: 1000px;
 }
 
 @media (max-width: 968px) {

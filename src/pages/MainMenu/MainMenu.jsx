@@ -42,7 +42,7 @@ function MainMenu() {
   }
 
   const handleDetails = () => {
-    navigate('/submenu')
+    navigate('/submenu', { state: { pointIndex: currentTextIndex } })
   }
 
   const handleCatalog = () => {

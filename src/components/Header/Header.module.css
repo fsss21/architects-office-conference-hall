@@ -47,13 +47,13 @@
 .headerItemNav {
   position: absolute;
   top: 0;
-  left: 185%;
+  left: 184%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 281px;
   gap: 16px;
-  margin-right: 25px;
+
 }
 
 .headerItemNavArrows {
@@ -443,23 +443,25 @@
 @media (min-width: 2560px) {
   .header {
     padding: 50px 0 0 0;
-    margin-left: 4%;
+    
   }
 
   .headerTitle {
-    font-size: 40px;
+    font-size: 38px;
     letter-spacing: 3px;
   }
 
   .headerButtons,
   .headerItemNav {
-    margin-right: 40px;
+    margin-right: 25px;
+    top: 30px;
   }
+
 
   .headerItemNav {
     width: 375px;
-    top: 45px;
     gap: 24px;
+    left: 186%;
   }
 
   .headerItemNavBtn,

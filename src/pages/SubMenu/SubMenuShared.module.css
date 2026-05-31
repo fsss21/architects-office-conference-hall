@@ -254,7 +254,7 @@
   }
 
   .galleryWrapper {
-    max-width: 1120px;
+    
   }
 
   .galleryWrapper :global(div[class*="photoGalleryContainer"]) {

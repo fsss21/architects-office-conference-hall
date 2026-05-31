@@ -1,5 +1,5 @@
-import { useState, useEffect, useMemo } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useState, useEffect, useMemo, useRef } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { useCatalogFilter } from '../../context/CatalogFilterContext'
 import { useSubMenuFilter } from '../../context/SubMenuFilterContext'
 import { filterPoint } from '../../utils/subMenuFilter'
@@ -18,8 +18,10 @@ import subMenuVideosImg4k from '../../assets/sub_menu_videos_img-4k.png'
 
 function SubMenu() {
   const navigate = useNavigate()
+  const location = useLocation()
   const { selectedItemIds } = useCatalogFilter()
   const { searchQuery } = useSubMenuFilter()
+  const appliedInitialPoint = useRef(false)
   const [selectedPoint, setSelectedPoint] = useState(0)
   const [progressPoints, setProgressPoints] = useState([])
   const [imageSrc, setImageSrc] = useState(subMenuImg)
@@ -43,6 +45,16 @@ function SubMenu() {
   const [id3VideoSubsection, setId3VideoSubsection] = useState(false)
 
   useEffect(() => {
+    if (appliedInitialPoint.current || progressPoints.length === 0) return
+    const pointIndex = location.state?.pointIndex
+    if (typeof pointIndex === 'number' && pointIndex >= 0 && pointIndex < progressPoints.length) {
+      setSelectedPoint(pointIndex)
+      if (progressPoints[pointIndex]?.id !== 3) setId3VideoSubsection(false)
+    }
+    appliedInitialPoint.current = true
+  }, [progressPoints, location.state])
+
+  useEffect(() => {
     if (progressPoints.length > 0 && selectedPoint >= progressPoints.length) {
       setSelectedPoint(0)
     }
@@ -63,7 +75,9 @@ function SubMenu() {
   const pointId = currentPoint?.id
   const showHeaderFilters = true
   const useVideosBg = pointId === 3 && id3VideoSubsection
-  const backgroundImageSrc = pointId === 2 ? scientificImageSrc : useVideosBg ? videosImageSrc : pointId === 3 ? scientificImageSrc : imageSrc
+  const useScientificBg = pointId === 1 || pointId === 2 || (pointId === 3 && !useVideosBg)
+  const backgroundImageSrc = useVideosBg ? videosImageSrc : useScientificBg ? scientificImageSrc : imageSrc
+  const isSubMenuScientificLayout = pointId === 1 || pointId === 2 || pointId === 3
 
   const navProps = { onBack: () => navigate('/'), onMainMenu: () => navigate('/catalog') }
 
@@ -87,9 +101,9 @@ function SubMenu() {
   return (
     <div className={styles.subMenu}>
       <div className={styles.subMenuBackground} style={{ backgroundImage: `url(${backgroundImageSrc})` }} />
-      <Header showFiltersAndSearch={showHeaderFilters} isSubMenuId2Or3={pointId === 2 || pointId === 3} />
+      <Header showFiltersAndSearch={showHeaderFilters} isSubMenuId2Or3={isSubMenuScientificLayout} />
       <div className={styles.subMenuContent}>
-        <ProgressLine points={progressPoints} onPointClick={handlePointClick} activeIndex={selectedPoint} isSubMenuId2Or3={pointId === 2 || pointId === 3} />
+        <ProgressLine points={progressPoints} onPointClick={handlePointClick} activeIndex={selectedPoint} isSubMenuId2Or3={isSubMenuScientificLayout} />
         {renderContent()}
       </div>
     </div>

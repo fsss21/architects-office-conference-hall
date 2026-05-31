@@ -309,7 +309,7 @@
 
 @media (min-width: 2560px) {
   .catalogItemPage {
-    padding-top: 140px;
+    padding-top: 120px;
   }
 
   .catalogItemContent {
@@ -361,6 +361,7 @@
 
   .catalogItemPhotoBlock {
     max-width: 1450px;
+    height: 1100px;
   }
 
   .catalogItemGallery {

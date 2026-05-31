@@ -228,6 +228,16 @@
 }
 
 @media (min-width: 2560px) {
+
+  .mainMenuTextContainer {
+    max-width: 730px;
+  }
+
+  .mainMenuCatalogBtnContainer {
+    right: 21%;
+    bottom: 46%;
+  }
+  
   .mainMenu {
     padding-top: 140px;
   }
