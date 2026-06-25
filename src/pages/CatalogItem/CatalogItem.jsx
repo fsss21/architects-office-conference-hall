@@ -210,25 +210,27 @@ function CatalogItem() {
             </div>
             {hasPhotosFromData && (
               <div className={styles.catalogItemPhotoNavigation}>
-                <button
-                  className={styles.catalogItemPhotoNavBtn}
-                  onClick={handlePrevPhoto}
-                  disabled={item.photos.length <= 1}
-                  aria-label="Предыдущее фото"
-                >
-                  <ArrowBackIosNewIcon />
-                </button>
-                <div className={styles.catalogItemPhotoCounter}>
-                  {currentPhotoIndex + 1} / {item.photos.length}
-                </div>
-                <button
-                  className={styles.catalogItemPhotoNavBtn}
-                  onClick={handleNextPhoto}
-                  disabled={item.photos.length <= 1}
-                  aria-label="Следующее фото"
-                >
-                  <ArrowForwardIosIcon />
-                </button>
+                {item.photos.length > 1 && (
+                  <>
+                    <button
+                      className={styles.catalogItemPhotoNavBtn}
+                      onClick={handlePrevPhoto}
+                      aria-label="Предыдущее фото"
+                    >
+                      <ArrowBackIosNewIcon />
+                    </button>
+                    <div className={styles.catalogItemPhotoCounter}>
+                      {currentPhotoIndex + 1} / {item.photos.length}
+                    </div>
+                    <button
+                      className={styles.catalogItemPhotoNavBtn}
+                      onClick={handleNextPhoto}
+                      aria-label="Следующее фото"
+                    >
+                      <ArrowForwardIosIcon />
+                    </button>
+                  </>
+                )}
                 <button
                   className={styles.catalogItemFullscreenBtn}
                   onClick={handleFullscreen}

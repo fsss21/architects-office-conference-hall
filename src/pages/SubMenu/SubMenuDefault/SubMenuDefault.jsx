@@ -82,7 +82,7 @@ function SubMenuDefault({ point, onBack, onMainMenu }) {
             <PhotoGallery
               photos={photos}
               showControls={false}
-              showArrows={isFullscreen}
+              showArrows={isFullscreen && photos.length > 1}
               showFullscreen={isFullscreen}
               onCloseFullscreen={() => setIsFullscreen(false)}
               currentIndex={currentPhotoIndex}
@@ -94,15 +94,17 @@ function SubMenuDefault({ point, onBack, onMainMenu }) {
         </div>
         {hasPhotos && (
           <div className={sharedStyles.galleryControls}>
-            <div className={sharedStyles.galleryNav}>
-              <button className={sharedStyles.galleryNavBtn} onClick={handlePrevPhoto} disabled={photos.length <= 1} aria-label="Предыдущее фото">
-                <ArrowBackIosNewIcon />
-              </button>
-              <span className={sharedStyles.galleryCounter}>{currentPhotoIndex + 1} / {photos.length}</span>
-              <button className={sharedStyles.galleryNavBtn} onClick={handleNextPhoto} disabled={photos.length <= 1} aria-label="Следующее фото">
-                <ArrowForwardIosIcon />
-              </button>
-            </div>
+            {photos.length > 1 && (
+              <div className={sharedStyles.galleryNav}>
+                <button className={sharedStyles.galleryNavBtn} onClick={handlePrevPhoto} aria-label="Предыдущее фото">
+                  <ArrowBackIosNewIcon />
+                </button>
+                <span className={sharedStyles.galleryCounter}>{currentPhotoIndex + 1} / {photos.length}</span>
+                <button className={sharedStyles.galleryNavBtn} onClick={handleNextPhoto} aria-label="Следующее фото">
+                  <ArrowForwardIosIcon />
+                </button>
+              </div>
+            )}
             <button className={sharedStyles.fullscreenBtn} onClick={() => setIsFullscreen(true)} aria-label="Полноэкранный режим">
               <FullscreenIcon fontSize="large" />
             </button>
